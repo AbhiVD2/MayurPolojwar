@@ -1,0 +1,99 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail, Github, Linkedin, Phone } from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function Portfolio() {
+  return (
+    <main className="p-6 space-y-12 max-w-5xl mx-auto font-sans bg-gradient-to-br from-white via-blue-50 to-blue-100 text-gray-800">
+      {/* Hero Section */}
+      <section className="text-center space-y-6">
+        <motion.h1 className="text-5xl font-extrabold text-blue-900" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          Mayur Polojwar
+        </motion.h1>
+        <p className="text-xl text-gray-700">Java Full Stack Developer | Spring Boot | Angular | AWS</p>
+        <div className="flex justify-center gap-6 text-blue-700 text-xl">
+          <a href="mailto:mayurpolojwar1@gmail.com" aria-label="Email"><Mail /></a>
+          <a href="tel:+917507811344" aria-label="Phone"><Phone /></a>
+          <a href="https://github.com/Mayurp375" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github /></a>
+          <a href="https://linkedin.com/in/mayurpolojwar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin /></a>
+        </div>
+      </section>
+
+      {/* About Me */}
+      <section className="space-y-4">
+        <h2 className="text-3xl font-bold text-blue-800">About Me</h2>
+        <p className="text-lg leading-relaxed">
+          I am a passionate Full Stack Developer with 3+ years of experience in building scalable, high-performance web applications.
+          With expertise in Spring Boot, Angular, cloud deployments, and Agile methodologies, I deliver efficient software solutions tailored
+          to the BFSI domain. Always keen to learn, collaborate, and build software that matters.
+        </p>
+      </section>
+
+      {/* Experience */}
+      <section className="space-y-4">
+        <h2 className="text-3xl font-bold text-blue-800">Experience</h2>
+
+        <Card className="shadow-xl">
+          <CardContent className="p-6">
+            <h3 className="text-2xl font-semibold">Perfios Software Solutions</h3>
+            <p className="text-gray-600">Associate Member Technical Team | Sep 2023 – Present</p>
+            <ul className="list-disc ml-6 mt-3 space-y-1 text-sm text-gray-700">
+              <li>Developed microservices and REST APIs for income analysis, fraud detection, loan & KYC services</li>
+              <li>Automated CI/CD with Jenkins and Docker, deploying to AWS & OpenShift</li>
+              <li>Integrated Redis, MongoDB, and SQL for optimized data management</li>
+              <li>Collaborated cross-functionally to resolve production issues and maintain high availability</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-xl">
+          <CardContent className="p-6">
+            <h3 className="text-2xl font-semibold">BridgeLab Solutions</h3>
+            <p className="text-gray-600">Trainee Software Developer | Sep 2022 – Sep 2023</p>
+            <ul className="list-disc ml-6 mt-3 space-y-1 text-sm text-gray-700">
+              <li>Built full-stack apps including Loan Origination and Payroll using Angular & Spring Boot</li>
+              <li>Implemented RESTful APIs and Test-Driven Development</li>
+              <li>Developed and deployed a Book Store App with responsive UI</li>
+              <li>Managed SQL databases and ensured smooth data flow across services</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Skills */}
+      <section className="space-y-4">
+        <h2 className="text-3xl font-bold text-blue-800">Technical Skills</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm text-gray-700">
+          <div><strong>Languages:</strong> Java, Groovy</div>
+          <div><strong>Frameworks:</strong> Spring Boot, Angular</div>
+          <div><strong>Databases:</strong> MySQL, MongoDB, Redis</div>
+          <div><strong>DevOps:</strong> Jenkins, Docker, GitLab</div>
+          <div><strong>Cloud:</strong> AWS, OpenShift</div>
+          <div><strong>Messaging:</strong> Kafka, RabbitMQ</div>
+          <div><strong>Testing:</strong> JUnit, Mockito, TDD</div>
+          <div><strong>Version Control:</strong> Git, GitHub</div>
+        </div>
+      </section>
+
+      {/* Education */}
+      <section className="space-y-4">
+        <h2 className="text-3xl font-bold text-blue-800">Education</h2>
+        <ul className="list-disc ml-6 text-gray-700">
+          <li><strong>B.Tech in Biotechnology Engineering</strong> – Priyadarshini Institute, Nagpur (2021)</li>
+          <li>12th & 10th – Gondwana Sainiki Vidyalaya, Gadchiroli</li>
+        </ul>
+      </section>
+
+      {/* Contact */}
+      <section className="text-center space-y-2">
+        <h2 className="text-3xl font-bold text-blue-800">Let's Connect</h2>
+        <p className="text-md text-gray-700">mayurpolojwar1@gmail.com | +91 7507811344</p>
+        <div className="flex justify-center gap-4">
+          <a href="https://github.com/Mayurp375" target="_blank" rel="noopener noreferrer"><Button className="bg-blue-600 text-white">GitHub</Button></a>
+          <a href="https://linkedin.com/in/mayurpolojwar" target="_blank" rel="noopener noreferrer"><Button className="bg-blue-700 text-white">LinkedIn</Button></a>
+        </div>
+      </section>
+    </main>
+  );
+}
